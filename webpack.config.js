@@ -20,6 +20,7 @@ module.exports = {
   module: {
     rules: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.css$/, use: ExtractTextPlugin.extract(['css-loader']) },
       { test: /\.less$/, use: ExtractTextPlugin.extract(['css-loader', 'less-loader']) },
       { test: /\.html$/, loader: 'raw-loader' }
     ]
